@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Riding Roller Coasters</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    body {
+      font-family: sans-serif;
+    }
+    img {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Whee!</h1>
+
+  <img id="roller" src="" alt="roller coaster">
+
+  <script type="text/javascript">
+    var imageSources = [
+      "http://images.mentalfloss.com/sites/default/files/styles/width-constrained-728/public/503373-iStock-186293315.jpg",
+      "https://media4.s-nbcnews.com/j/newscms/2017_31/1270023/wonder-woman-roller-coaster-today-inline-170803_7e4934000dfd84cdbb6b2f4900a03988.today-inline-large.jpg",
+      "http://cdn.cnn.com/cnnnext/dam/assets/160520171710-07-stormchaser-jpg-best-coasters-super-169.jpg",
+      "https://thediabeticjourney.com/wp-content/uploads/2016/08/diabetes-rollercoaster.png"
+    ]
+
+    var theImg = document.querySelector("img#roller");
+
+    theImg.setAttribute("src", imageSources[0]);
+
+    var howMany = prompt("How many roller coaster rides would you like to go on?")
+    var howManyTimes = parseInt(howMany)
+    
+    var counter = 1;
+
+    while(counter <= howManyTimes){
+      console.log("Wheee! This is the ", counter, " time we've done this!");
+      var theOne = counter % imageSources.length;
+      theImg.setAttribute("src", imageSources[theOne]);
+      counter=counter+1
+    }
+    console.log ("Wow! That was a lot of rides.")
+  </script>
+
+</body>
+</html>
