@@ -6,9 +6,18 @@
   <style type="text/css">
     body {
       font-family: sans-serif;
+      background-color: rgb(22, 65, 135);
+      color: white;
+    }
+    h1 {
+      text-align: center;
+      font-size: 36pt;
     }
     img {
+      display: block;
+      margin: auto;
       max-width: 100%;
+      border: 5px solid white;
     }
   </style>
 </head>
@@ -38,8 +47,9 @@
       console.log("Wheee! This is the ", counter, " time we've done this!");
       var theOne = counter % imageSources.length;
       theImg.setAttribute("src", imageSources[theOne]);
-      counter=counter+1
-    }
+      counter=counter+1;
+    
+      
     console.log ("Wow! That was a lot of rides.")
   </script>
 
